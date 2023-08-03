@@ -60,7 +60,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1017850040672',
     projectId: 'whats-in-my-fridge-e7c24',
     storageBucket: 'whats-in-my-fridge-e7c24.appspot.com',
-    iosClientId: '1017850040672-kc8tv2lj788e9uvjnt4ap4tdr43lspbl.apps.googleusercontent.com',
+    iosClientId:
+        '1017850040672-kc8tv2lj788e9uvjnt4ap4tdr43lspbl.apps.googleusercontent.com',
     iosBundleId: 'com.example.whatsInMyFridge',
   );
 
@@ -70,7 +71,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1017850040672',
     projectId: 'whats-in-my-fridge-e7c24',
     storageBucket: 'whats-in-my-fridge-e7c24.appspot.com',
-    iosClientId: '1017850040672-rggibopg5gra0mkeji51kjia1brqijjo.apps.googleusercontent.com',
+    iosClientId:
+        '1017850040672-rggibopg5gra0mkeji51kjia1brqijjo.apps.googleusercontent.com',
     iosBundleId: 'com.example.whatsInMyFridge.RunnerTests',
   );
 }
