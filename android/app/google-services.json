@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1017850040672",
+    "project_id": "whats-in-my-fridge-e7c24",
+    "storage_bucket": "whats-in-my-fridge-e7c24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017850040672:android:2792f35d0713a87ce7ce05",
+        "android_client_info": {
+          "package_name": "com.example.whats_in_my_fridge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017850040672-0ae6d8ooqkguiv2mlmr804i467t42cjc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9iuc4U6HtJDkD8h6gXMKGwfDikJQ_cXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017850040672-0ae6d8ooqkguiv2mlmr804i467t42cjc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1017850040672-kc8tv2lj788e9uvjnt4ap4tdr43lspbl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.whatsInMyFridge"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
