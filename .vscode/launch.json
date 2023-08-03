@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "preLaunchTask": "prepare-development-env",
+      "name": "Development",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "preLaunchTask": "prepare-production-env",
+      "name": "Release",
+      "request": "launch",
+      "type": "dart"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "prepare-development-env",
+      "command": "./scripts/prepare_env_for_build.sh",
+      "args": ["development"],
+      "type": "shell"
+    },
+    {
+      "label": "prepare-production-env",
+      "command": "./scripts/prepare_env_for_build.sh",
+      "args": ["production"],
+      "type": "shell"
+    }
+  ]
+}
