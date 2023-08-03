@@ -3,19 +3,29 @@ import 'package:flutter/foundation.dart';
 class AuthState extends ChangeNotifier {
   AuthState();
 
-  bool _isAuthenticated = true;
+  String? _token;
 
-  bool get isAuthenticated => _isAuthenticated;
+  bool _getIsAuthenticated() {
+    if (_token == null) return false;
 
-  void authenticate() {
-    _isAuthenticated = true;
+    return _token!.isNotEmpty;
+  }
+
+  bool get isAuthenticated => _getIsAuthenticated();
+
+  void authenticate({required String token}) {
+    _token = token;
 
     notifyListeners();
   }
 
   void unauthenticate() {
-    _isAuthenticated = false;
+    _token = null;
 
     notifyListeners();
+  }
+
+  void updateToken({required String newToken}) {
+    _token = newToken;
   }
 }

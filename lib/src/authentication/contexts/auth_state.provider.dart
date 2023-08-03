@@ -4,18 +4,18 @@ import 'package:provider/provider.dart';
 import 'package:whats_in_my_fridge/src/authentication/contexts/auth_state.dart';
 // import 'package:whats_in_my_fridge/src/shared/core/errors/debug/missing_context_exception.dart';
 
-class AuthStateProvider extends StatelessWidget {
-  const AuthStateProvider({super.key, required this.child});
+class AuthStateProvider {
+  const AuthStateProvider();
 
-  final Widget child;
+  static AuthState of(BuildContext context, {bool listen = true}) =>
+      Provider.of<AuthState>(context, listen: listen);
 
-  static AuthState of(BuildContext context) => Provider.of<AuthState>(context);
+  static AuthState ofWithNoListen(BuildContext context) =>
+      Provider.of<AuthState>(context, listen: false);
 
-  @override
-  Widget build(BuildContext context) {
+  static ChangeNotifierProvider<AuthState> create() {
     return ChangeNotifierProvider(
       create: (context) => AuthState(),
-      child: child,
     );
   }
 }
