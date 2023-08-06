@@ -1,7 +1,20 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 
 class AuthState extends ChangeNotifier {
-  AuthState();
+  AuthState() {
+    FirebaseAuth.instance.idTokenChanges().listen((user) {
+      if (user == null) {
+        unauthenticate();
+      } else {
+        user.getIdToken().then((value) {
+          if (value != null) {
+            authenticate(token: value);
+          }
+        });
+      }
+    });
+  }
 
   String? _token;
 

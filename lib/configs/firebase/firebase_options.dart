@@ -51,6 +51,8 @@ class DefaultFirebaseOptions {
     appId: '1:1017850040672:android:2792f35d0713a87ce7ce05',
     messagingSenderId: '1017850040672',
     projectId: 'whats-in-my-fridge-e7c24',
+    databaseURL:
+        'https://whats-in-my-fridge-e7c24-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'whats-in-my-fridge-e7c24.appspot.com',
   );
 
@@ -59,6 +61,8 @@ class DefaultFirebaseOptions {
     appId: '1:1017850040672:ios:0669d246f204b1a2e7ce05',
     messagingSenderId: '1017850040672',
     projectId: 'whats-in-my-fridge-e7c24',
+    databaseURL:
+        'https://whats-in-my-fridge-e7c24-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'whats-in-my-fridge-e7c24.appspot.com',
     iosClientId:
         '1017850040672-kc8tv2lj788e9uvjnt4ap4tdr43lspbl.apps.googleusercontent.com',
@@ -70,6 +74,8 @@ class DefaultFirebaseOptions {
     appId: '1:1017850040672:ios:0604757184d75e75e7ce05',
     messagingSenderId: '1017850040672',
     projectId: 'whats-in-my-fridge-e7c24',
+    databaseURL:
+        'https://whats-in-my-fridge-e7c24-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'whats-in-my-fridge-e7c24.appspot.com',
     iosClientId:
         '1017850040672-rggibopg5gra0mkeji51kjia1brqijjo.apps.googleusercontent.com',

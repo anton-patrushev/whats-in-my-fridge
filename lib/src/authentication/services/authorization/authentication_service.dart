@@ -1,4 +1,4 @@
 abstract class AuthenticationService {
-  Future<String> authorize();
+  Future<void> authorize();
   Future<void> unauthorize();
 }
