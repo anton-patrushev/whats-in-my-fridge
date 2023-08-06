@@ -3,12 +3,22 @@
   "configurations": [
     {
       "preLaunchTask": "prepare-development-env",
+      "name": "Development (with .env refresh)",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
       "name": "Development",
       "request": "launch",
       "type": "dart"
     },
     {
       "preLaunchTask": "prepare-production-env",
+      "name": "Release (with .env refresh)",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
       "name": "Release",
       "request": "launch",
       "type": "dart"
