@@ -45,6 +45,7 @@ dependencies:
       url: git@github.com:anton-patrushev/packages.git
       ref: patch-google-sign-in-6.1.4
       path: packages/google_sign_in/google_sign_in
+  cloud_firestore: ^4.9.3
 
 dev_dependencies:
   flutter_test:
