@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:whats_in_my_fridge/src/app/ui/routers/main_router.dart';
 
 import 'package:whats_in_my_fridge/src/authentication/contexts/auth_state.provider.dart';
-import 'package:whats_in_my_fridge/src/authentication/services/authorization/session/session_service.dart';
 import 'package:whats_in_my_fridge/src/authentication/ui/screens/sign_in_up.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,25 +18,16 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: make some initial API or SDK calls to init the app
     // TODO: add logic to handle app loading failed
 
-    try {
-      await SessionService().refreshSession();
-    } catch (e) {
-      // TODO: better logging
-      print(e);
-    }
-
     setState(() {
       appLoadingFinished = true;
     });
 
-    proceedToTheApp();
+    // await proceedToTheApp();
   }
 
   void proceedToTheApp() {
     WidgetsBinding.instance.addPostFrameCallback((timestamp) {
-      final authState = AuthStateProvider.of(context, listen: false);
-
-      if (authState.isAuthenticated) {
+      if (AuthStateProvider.of(context, listen: false).isAuthenticated) {
         Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (context) => const MainRouter()));
       } else {
@@ -49,19 +39,23 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
+    print("init state");
     super.initState();
 
     loadApp();
   }
 
-  @override
-  void didUpdateWidget(covariant SplashScreen oldWidget) {
-    super.didUpdateWidget(oldWidget);
+  void proceedToTheAppIfAuthStateInitializedAndAppLoaded() {
+    if (!appLoadingFinished) return;
+    if (!AuthStateProvider.of(context).wasAuthStateInitialized) return;
+
+    proceedToTheApp();
   }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: add app logo
+    proceedToTheAppIfAuthStateInitializedAndAppLoaded();
+
     return const Scaffold(
         body: Column(
       mainAxisAlignment: MainAxisAlignment.center,
