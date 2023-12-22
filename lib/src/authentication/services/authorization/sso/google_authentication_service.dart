@@ -37,8 +37,5 @@ class GoogleAuthenticationService implements AuthenticationService {
     }
   }
 
-  @override
-  Future<void> unauthorize() async {}
-
   static GoogleAuthenticationService shared = GoogleAuthenticationService();
 }

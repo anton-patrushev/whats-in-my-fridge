@@ -13,9 +13,4 @@ class AppleAuthenticationService implements AuthenticationService {
       throw const SSOAuthenticationFailedException();
     }
   }
-
-  @override
-  Future<void> unauthorize() async {
-    // TODO: make some SDK call?
-  }
 }
