@@ -49,6 +49,11 @@ class AuthState extends ChangeNotifier {
 
     notifyListeners();
 
+    FirebaseAuth.instance.currentUser?.delete().catchError((e) {
+      // TODO: better logging
+      print('Revoking firebase authentication session failed: $e');
+    });
+
     SessionStorage().cleanTokenFromStorage().catchError((e) {
       // TODO: better logging
       print('Cleaning token from storage failed: $e');
