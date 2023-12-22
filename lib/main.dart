@@ -5,8 +5,8 @@ import 'package:whats_in_my_fridge/src/app/main_app.dart';
 import 'package:whats_in_my_fridge/configs/firebase/init_firebase.dart';
 
 void main() async {
-  await Enviroment.init();
-  Enviroment.buildConfig();
+  await Environment.init();
+  Environment.buildConfig();
 
   WidgetsFlutterBinding.ensureInitialized();
 

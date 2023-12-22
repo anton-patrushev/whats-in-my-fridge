@@ -9,7 +9,7 @@ Future<void> initFirebase() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  if (Enviroment.config.isDebug) {
+  if (Environment.config.isDebug) {
     FirebaseFirestore.instance.useFirestoreEmulator('localhost', 8080);
   }
 }
