@@ -21,8 +21,6 @@ class _SplashScreenState extends State<SplashScreen> {
     setState(() {
       appLoadingFinished = true;
     });
-
-    // await proceedToTheApp();
   }
 
   void proceedToTheApp() {
@@ -39,7 +37,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    print("init state");
     super.initState();
 
     loadApp();
