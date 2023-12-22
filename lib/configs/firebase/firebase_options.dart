@@ -28,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -67,18 +70,5 @@ class DefaultFirebaseOptions {
     iosClientId:
         '1017850040672-kc8tv2lj788e9uvjnt4ap4tdr43lspbl.apps.googleusercontent.com',
     iosBundleId: 'com.example.whatsInMyFridge',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCynuCnvggYYyu1CLUlVUUDUsrVzLimdcg',
-    appId: '1:1017850040672:ios:0604757184d75e75e7ce05',
-    messagingSenderId: '1017850040672',
-    projectId: 'whats-in-my-fridge-e7c24',
-    databaseURL:
-        'https://whats-in-my-fridge-e7c24-default-rtdb.europe-west1.firebasedatabase.app',
-    storageBucket: 'whats-in-my-fridge-e7c24.appspot.com',
-    iosClientId:
-        '1017850040672-rggibopg5gra0mkeji51kjia1brqijjo.apps.googleusercontent.com',
-    iosBundleId: 'com.example.whatsInMyFridge.RunnerTests',
   );
 }
