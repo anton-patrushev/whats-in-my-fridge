@@ -59,15 +59,4 @@ class AuthState extends ChangeNotifier {
       print('Cleaning token from storage failed: $e');
     });
   }
-
-  void updateToken({required String newToken}) {
-    _token = newToken;
-
-    notifyListeners();
-
-    SessionStorage().writeTokenToStorage(newToken).catchError((e) {
-      // TODO: better logging
-      print('Updating token in storage failed: $e');
-    });
-  }
 }

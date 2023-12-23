@@ -1,8 +1,7 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:whats_in_my_fridge/src/authentication/contexts/auth_state.dart';
-// import 'package:whats_in_my_fridge/src/shared/core/errors/debug/missing_context_exception.dart';
 
 class AuthStateProvider {
   const AuthStateProvider();

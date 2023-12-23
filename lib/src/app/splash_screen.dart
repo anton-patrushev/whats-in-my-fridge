@@ -18,6 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: make some initial API or SDK calls to init the app
     // TODO: add logic to handle app loading failed
 
+    await Future.delayed(const Duration(seconds: 2));
+
     setState(() {
       appLoadingFinished = true;
     });
