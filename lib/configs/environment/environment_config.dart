@@ -4,7 +4,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 enum EnvironmentType { development, release }
 
 extension EnvironmentUtilities on EnvironmentType {
-  static EnvironmentType parseRawStringEnviroment(String rawEnv) {
+  static EnvironmentType parseRawStringEnvironment(String rawEnv) {
     if (rawEnv == 'production') return EnvironmentType.release;
 
     return EnvironmentType.development;
@@ -14,7 +14,7 @@ extension EnvironmentUtilities on EnvironmentType {
 @immutable
 class EnvironmentConfig {
   final EnvironmentType enviroment =
-      EnvironmentUtilities.parseRawStringEnviroment(dotenv.get('ENVIRONMENT'));
+      EnvironmentUtilities.parseRawStringEnvironment(dotenv.get('ENVIRONMENT'));
   final bool isDebug = bool.parse(dotenv.get('DEBUG', fallback: 'false'));
 }
 
