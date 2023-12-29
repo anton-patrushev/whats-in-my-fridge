@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:whats_in_my_fridge/configs/environment/environment_config.dart';
 
 import 'package:whats_in_my_fridge/src/app/main_app.dart';

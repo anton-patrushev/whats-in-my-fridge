@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class SSOAuthButton extends StatelessWidget {
   const SSOAuthButton(
@@ -7,7 +6,7 @@ class SSOAuthButton extends StatelessWidget {
       required this.onPress,
       required this.icon,
       required this.label,
-      this.color = Colors.blue});
+      this.color = CupertinoColors.systemBlue});
 
   final VoidCallback? onPress;
   final IconData icon;

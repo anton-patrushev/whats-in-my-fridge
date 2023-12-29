@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:whats_in_my_fridge/src/app/ui/routers/main_router.dart';
 
@@ -12,13 +12,13 @@ class SignInUp extends StatelessWidget {
 
   void navigateToMainRouter(BuildContext context) {
     Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const MainRouter()));
+        CupertinoPageRoute(builder: (context) => const MainRouter()));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
+    return CupertinoPageScaffold(
+        child: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -37,7 +37,7 @@ class SignInUp extends StatelessWidget {
                 },
                 icon: Ionicons.logo_google,
                 label: 'Continue using Google account',
-                color: Colors.blue),
+                color: CupertinoColors.systemBlue),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20),
@@ -54,7 +54,7 @@ class SignInUp extends StatelessWidget {
                 },
                 icon: Ionicons.logo_apple,
                 label: 'Continue using Apple account',
-                color: Colors.black),
+                color: CupertinoColors.black),
           )
         ],
       ),

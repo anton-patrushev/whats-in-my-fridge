@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
 import 'package:whats_in_my_fridge/src/app/splash_screen.dart';
@@ -9,12 +9,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const CupertinoApp(
         title: "What's in my fridge",
-        theme: ThemeData(
-            useMaterial3: true,
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue)),
-        home: const SplashScreen());
+        theme: CupertinoThemeData(
+          primaryColor: CupertinoColors.systemBlue,
+        ),
+        home: SplashScreen());
   }
 }
 

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:whats_in_my_fridge/src/app/ui/routers/main_router.dart';
 
 import 'package:whats_in_my_fridge/src/authentication/contexts/auth_state.provider.dart';
@@ -29,10 +29,10 @@ class _SplashScreenState extends State<SplashScreen> {
     WidgetsBinding.instance.addPostFrameCallback((timestamp) {
       if (AuthStateProvider.of(context, listen: false).isAuthenticated) {
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => const MainRouter()));
+            CupertinoPageRoute(builder: (context) => const MainRouter()));
       } else {
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => const SignInUp()));
+            CupertinoPageRoute(builder: (context) => const SignInUp()));
       }
     });
   }
@@ -55,8 +55,8 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     proceedToTheAppIfAuthStateInitializedAndAppLoaded();
 
-    return const Scaffold(
-        body: Column(
+    return const CupertinoPageScaffold(
+        child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [Center(child: Text('Loading ...'))],
     ));
