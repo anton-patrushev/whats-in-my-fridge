@@ -1,14 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:whats_in_my_fridge/src/app/data/remote/constants/db_collections.dart';
 import 'package:whats_in_my_fridge/src/authentication/errors/release/data/failed_to_save_user_exception.dart';
 import 'package:whats_in_my_fridge/src/authentication/models/user.dart';
 
 class UserRepository {
   final _db = FirebaseFirestore.instance;
-  final _usersCollectionName = 'users';
+  final _usersCollectionName = DBCollections.users.name;
 
   Map<String, dynamic> _explicitlyMapUserToDTO(UserEntity user) {
     return {
-      'firstName': user.fistName,
+      'firstName': user.firstName,
       'lastName': user.lastName,
     };
   }

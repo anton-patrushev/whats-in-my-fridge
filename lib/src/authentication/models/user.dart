@@ -1,7 +1,7 @@
 class UserEntity {
   final String uuid;
-  final String? fistName;
+  final String? firstName;
   final String? lastName;
 
-  const UserEntity({required this.uuid, this.fistName, this.lastName});
+  const UserEntity({required this.uuid, this.firstName, this.lastName});
 }
