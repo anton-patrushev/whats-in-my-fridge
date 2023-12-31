@@ -243,12 +243,11 @@ packages:
   google_sign_in:
     dependency: "direct main"
     description:
-      path: "packages/google_sign_in/google_sign_in"
-      ref: "patch-google-sign-in-6.1.4"
-      resolved-ref: "6b0706398b42677f8ba8765728bbc773a2931255"
-      url: "git@github.com:anton-patrushev/packages.git"
-    source: git
-    version: "6.1.4"
+      name: google_sign_in
+      sha256: "0b8787cb9c1a68ad398e8010e8c8766bfa33556d2ab97c439fb4137756d7308f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.2.1"
   google_sign_in_android:
     dependency: transitive
     description:

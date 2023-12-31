@@ -40,11 +40,7 @@ dependencies:
   firebase_core: ^2.15.0
   flutter_dotenv: ^5.1.0
   firebase_auth: ^4.10.1
-  google_sign_in:
-    git:
-      url: git@github.com:anton-patrushev/packages.git
-      ref: patch-google-sign-in-6.1.4
-      path: packages/google_sign_in/google_sign_in
+  google_sign_in: ^6.2.1
   cloud_firestore: ^4.9.3
 
 dev_dependencies:
