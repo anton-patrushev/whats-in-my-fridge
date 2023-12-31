@@ -15,10 +15,12 @@ class AuthState extends ChangeNotifier {
             authenticate(token: value);
           }
         });
+        _currentUserUUID = user.email;
       }
     });
   }
 
+  String? _currentUserUUID;
   AuthStateMode _mode = AuthStateMode.wasNotInitialized;
   String? _token;
 
@@ -30,6 +32,8 @@ class AuthState extends ChangeNotifier {
   bool get wasAuthStateInitialized => _mode != AuthStateMode.wasNotInitialized;
   String get token =>
       _token == null ? throw const TokenIsMissing() : _token as String;
+  String get currentUserUUID =>
+      _currentUserUUID == null ? '' : _currentUserUUID as String;
 
   void authenticate({required String token}) {
     _token = token;
