@@ -13,7 +13,7 @@ extension EnvironmentUtilities on EnvironmentType {
 
 @immutable
 class EnvironmentConfig {
-  final EnvironmentType enviroment =
+  final EnvironmentType environment =
       EnvironmentUtilities.parseRawStringEnvironment(dotenv.get('ENVIRONMENT'));
   final bool isDebug = bool.parse(dotenv.get('DEBUG', fallback: 'false'));
 }
